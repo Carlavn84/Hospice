@@ -17,6 +17,11 @@ class Controller extends CI_Controller
         $this->load->view('hospice/register');
     }
 
+      public function steun_ons_pagina()
+    {
+        $this->load->view('hospice/donation');
+    }
+    
 
     public function register()
     {
