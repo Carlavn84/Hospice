@@ -55,6 +55,7 @@ $route['volunteer'] = 'Controller/volunteerpage';
 $route['volunteer_register_page'] = 'Controller/volunteer_register_page';
 $route['volunteer_register'] = 'Controller/register';
 $route['home'] = 'Controller/index';
+$route['steun-ons'] = 'Controller/steun_ons_pagina';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
