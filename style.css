@@ -1,0 +1,241 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    background-color: rgb(110, 36, 57);
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    border: rgb(110, 36, 57);
+}
+
+.navbar-brand{
+    min-height: 55px;
+    font-family: "Satisfy";
+    font-size:25px;
+    margin-bottom: -40px;
+    color: #D5D5D5;
+}
+.navbar-default .navbar-brand {
+    color: #e0741a;
+}
+
+.navbar-default .navbar-nav li a{
+    color: #D5D5D5;
+ 
+}
+.navbar-nav li a{
+    vertical-align: middle;
+    text-align: center;
+    bottom: 30px;
+    right: 20px;
+}
+.navbar-nav{
+    
+    margin-bottom: -40px;
+    padding-top: 10px;
+}
+
+.navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a.active{
+    color: #FFF;
+}
+
+.home {
+    background-image: url('img/background1.jpg');
+    display: table;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	will-change: transform;
+	z-index: -1;
+}
+
+.landing-text {   
+    display: table;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.5);
+	z-index: 100;
+	display: table-cell;
+	text-align: center;
+    vertical-align: middle;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	will-change: transform;
+    z-index: -1;
+}
+
+/* .first-text{
+    border: 2px rgb(110, 36, 57) solid;
+    border-radius: 10px;
+    padding-bottom: 10px;
+} */
+
+.landing-text h1{
+    color: rgb(110, 36, 57);
+    font-size: 300%;
+    font-size: 700; 
+    font-family: 'Satisfy';
+    padding-top: 10px;
+}
+.landing-text h3{
+    color: rgb(56, 19, 28);
+    
+}
+
+.btn-default{
+    background-color: rgb(224, 94, 18);
+    color: black;
+    border: #e0741a;
+    font-style: inherit;
+}
+
+.padding{
+    padding: 80px 0;
+}
+.padding h2{
+    color: rgb(110, 36, 57);
+}
+.padding img{
+    width: 100%;
+}
+
+.home-orga{
+    background-image: url('img/backgound2.jpg');
+    display: table;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center center;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	will-change: transform;
+	z-index: -1; 
+}
+
+/* .landing-text-orga {   
+    display: table;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.4);
+	z-index: 100;
+	display: table-cell;
+	text-align: center;
+    vertical-align: middle;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	will-change: transform;
+    z-index: -1;
+} */
+
+.padding-orga{
+    padding: 80px;
+}
+
+.padding-orga h2{
+    color: #FFF;
+}
+.padding-orga p{
+    color: rgb(212, 212, 212);
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+.col-lg-12{
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+.home-donation{
+    background-image: url('img/donation.jpg');
+    display: table;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+	will-change: transform;
+	z-index: -1;
+}
+
+.home-donation .col-lg-12{
+    background-color: rgba(32, 100, 38, 0.7);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+.home-donation p{
+    font-size: 15px;
+}
+
+#fixed{
+    background: url(img/background1.jpg) no-repeat center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+footer{
+    width: 100%;
+    background-color: rgb(110, 36, 57);
+    padding: 0% 0% 0% 0%;
+    text-align: center;
+    color: #FFF;
+}
+
+.col-sm-3{
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 60px;
+}
+.email{
+    color: #FFF;
+}
+
+.fa{
+    padding: 15px;
+    font-size: 25px;
+    color: #FFF;
+}
+
+.fa:hover{
+    color: #D5D5D5;
+    text-decoration: none;
+}
+
+.icon{
+    max-width: 200px;
+}
+
+@media (max-width: 768px){
+    .landing-text h1{
+        font-size: 300%;
+    }
+    .fa{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .icon{
+        padding-top: 5px;
+        max-width: 100px;
+    }
+} 
