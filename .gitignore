@@ -1,30 +1,31 @@
-/*
-!.gitignore
-!.htaccess
-!*.jpg
-!*.mwb
-!*.css
+.DS_Store
 
-!/assets
-!/img
+application/cache/*
+!application/cache/index.html
 
-!/application
-/application/*
+application/logs/*
+!application/logs/index.html
 
-!/application/config
-/application/config/*
-!/application/config/autoload.php
-!/application/config/config.php
-!/application/config/database.php
-!/application/config/routes.php
+!application/*/.htaccess
 
-!/application/controllers
-/application/controllers/Welcome.php
+composer.lock
 
-!/application/models
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
 
-!/application/views
-/application/views/errors
-/application/views/welcome_message.php
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
 
-index.html
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+/tests/tests/
+/tests/results/

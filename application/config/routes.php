@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 $route['default_controller'] = 'Blog/home';
 $route['home'] = 'Blog/home';
@@ -18,7 +18,7 @@ $route['backAdd'] = 'Blog/backAdd';
 $route['backNews'] = 'Blog/backNews';
 
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = false;
 
 //ADminROUtes
 
