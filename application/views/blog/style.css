@@ -10,15 +10,11 @@ html, body{
 }
 
 .navbar-brand{
-    /* min-height: 55px; */
+    min-height: 55px;
     font-family: "Satisfy";
-    /* font-size:25px; */
-    /* margin-top: 15px; */
-    margin-bottom: 20px;
+    color: #D5D5D5;
 }
-.navbar-brand h5{
-    font-size: 25px;
-}
+
 
 .navbar-default .navbar-brand {
     color: #c48430;
@@ -351,6 +347,10 @@ footer{
     .fa{
         font-size: 20px;
         padding: 10px;
+    }
+    .navbar-brand img{
+        max-width: 120px;
+        max-height: 120px;
     }
     .icon{
         padding-top: 5px;
