@@ -8,6 +8,19 @@
             $this->load->model('Blog_m', 'm');
         }
 
+        protected function checkIfAdmin() {
+            $userdata = $this->session->get_userdata();
+            
+            if (isset($userdata['is_logged_in']) && $userdata['is_logged_in'] === true) {
+                // check successful!
+                return;
+            }
+            
+            // not logged in
+            http_response_code(403);
+            die;
+        }
+
         public function index()
         {
             $data['blogs']= $this->m->getblog();
@@ -90,6 +103,7 @@
 
         public function addNews(){
 
+            $this->checkIfAdmin();
 
             $this->form_validation->set_rules('txt_title', 'Title', 'required');
             $this->form_validation->set_rules('txt_description', 'Description', 'required');
@@ -126,6 +140,7 @@
         }
 
         public function allnews(){
+            $this->checkIfAdmin();
             $this->load->view('blog/editpage');
             redirect('/admin/news');
         }
@@ -163,6 +178,7 @@
 
 
         public function delete($id){
+            $this->checkIfAdmin();
 
             // var_dump($id);
             // die();
@@ -175,6 +191,7 @@
         }
 
         public function adminNews(){
+            $this->checkIfAdmin();
 
             $news['article'] = $this->m->showArticlestoAdmin();
             $this->load->view('blog/adminnews', $news);
@@ -182,6 +199,8 @@
         }
 
         public function editPage($id){
+            
+            $this->checkIfAdmin();
 
             $data['new'] = $this->m->getBlogBy($id);
             $this->load->view('blog/editpage', $data );
@@ -192,6 +211,7 @@
             // $this->load->view('layout/footer');
 
         }public function editnew(){
+            $this->checkIfAdmin();
 
             $postinfo = $this->input->post(null, true);
            
