@@ -75,7 +75,7 @@
 
             $this->session->set_userdata($user_logged);
             $datainfo['logged']= 'You are logged in';
-            redirect('http://localhost:8888/add');
+            redirect('/add');
 
              
         } else{
@@ -117,8 +117,8 @@
 
                 $news['article'] = $this->m->showArticle();
                 $this->m->submit($data);
-                $this->load->view('blog/add', $news);
-                redirect('http://localhost:8888/add');
+
+                redirect('/add');
 
             }
 
@@ -127,16 +127,16 @@
 
         public function allnews(){
             $this->load->view('blog/editPage');
-            redirect('http://localhost:8888/admin/news');
+            redirect('/admin/news');
         }
 
         public function backAdd(){
             $this->load->view('blog/add');
-            redirect('http://localhost:8888/add');
+            redirect('/add');
         }
         public function backNews(){
             $this->load->view('blog/editPage');
-            redirect('http://localhost:8888/admin/news');
+            redirect('/admin/news');
         }
         
 
@@ -206,7 +206,7 @@
         {
             $this->session->sess_destroy();
 
-            redirect('http://localhost:8888/admin');
+            redirect('/admin');
         }
        
 
