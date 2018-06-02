@@ -4,7 +4,6 @@
     class Blog extends CI_Controller
     {
         function __construct(){
-
             parent::__construct();
             $this->load->model('Blog_m', 'm');
         }
@@ -28,7 +27,6 @@
         }
 
         public function  news(){
-            $this->load->model('Blog_m', 'm');
             $news['article'] = $this->m->showArticle();
             $this->load->view('blog/news', $news);
         }
@@ -63,8 +61,7 @@
         $password_login = $this->input->post('password_login',TRUE);
        
        
-        $this->load->model('Blog_m');
-        $user = $this->blog_m->get_user_by_email($email_login);
+         $user = $this->m->get_user_by_email($email_login);
             
         if($user && $user['password'] == $password_login){
 
@@ -118,8 +115,6 @@
 
               
 
-                $this->load->model('Blog_m', 'm');
-                $this->load->model('Blog_m', 'm');
                 $news['article'] = $this->m->showArticle();
                 $this->m->submit($data);
                 $this->load->view('blog/add', $news);
@@ -147,7 +142,6 @@
 
         public function newsImage($id)
         {
-            $this->load->model('Blog_m', 'm');
             $article = $this->m->getBlogBy($id);
 
             $data = array(
@@ -160,7 +154,6 @@
         public function showPage()
         {
 
-            $this->load->model('Blog_m', 'm');
             $news['article'] = $this->m->showArticle();
             
         
@@ -174,7 +167,6 @@
             // var_dump($id);
             // die();
 
-            $this->load->model('blog_m');
             $deleting = $this->m->delete_news($id);
             $news['article'] = $this->m->showArticle();
             // $this->load->view('blog/add', $news);
@@ -184,7 +176,6 @@
 
         public function adminNews(){
 
-            $this->load->model('Blog_m', 'm');
             $news['article'] = $this->m->showArticlestoAdmin();
             $this->load->view('blog/adminnews', $news);
 
@@ -204,7 +195,6 @@
 
             $postinfo = $this->input->post(null, true);
            
-            $this->load->model('blog_m');
             $this->m->editBlog($postinfo);      
             redirect('/admin/news');
     
