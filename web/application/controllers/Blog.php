@@ -126,7 +126,7 @@
         }
 
         public function allnews(){
-            $this->load->view('blog/editPage');
+            $this->load->view('blog/editpage');
             redirect('/admin/news');
         }
 
@@ -135,7 +135,7 @@
             redirect('/add');
         }
         public function backNews(){
-            $this->load->view('blog/editPage');
+            $this->load->view('blog/editpage');
             redirect('/admin/news');
         }
         
