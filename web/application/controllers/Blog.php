@@ -49,7 +49,7 @@
 
         public function welcome(){
 
-            $this->load->view('Blog/welcome');
+            $this->load->view('blog/welcome');
 
             
         }
@@ -63,7 +63,7 @@
         $password_login = $this->input->post('password_login',TRUE);
        
        
-        $this->load->model('blog_m');
+        $this->load->model('Blog_m');
         $user = $this->blog_m->get_user_by_email($email_login);
             
         if($user && $user['password'] == $password_login){
@@ -98,7 +98,7 @@
             $this->form_validation->set_rules('txt_description', 'Description', 'required');
             if($this->form_validation->run()==false){
                 $data['error'] = validation_errors();
-                $this->load->view('Blog/add',$data);
+                $this->load->view('blog/add',$data);
 
             } else {
 
